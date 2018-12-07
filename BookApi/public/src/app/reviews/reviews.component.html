@@ -1,0 +1,22 @@
+<div id="parallax0">
+<div class="container">
+  <table class="highlight centered">
+    <thead>
+      <th>Reviewer</th>
+      <th class="lgView">Title</th>
+      <th class="lgView">Author</th>
+      <th class="lgView">Review</th>
+      <th class="lgView">Date Reviewed</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let review of reviews">
+        <td><a class="show" [routerLink]="[review.id]">{{review.name}}</a></td>
+        <td class="lgView">{{review.title}}</td>
+        <td class="lgView">{{review.author}}</td>
+        <td class="lgView">{{review.review}}</td>
+        <td class="lgView">{{review.createdAt | date: "medium"}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<button class="waves-effect waves-light btn brown darken-1" (click)="getBooks()">Refresh Table</button>

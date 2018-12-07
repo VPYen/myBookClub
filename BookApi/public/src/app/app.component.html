@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav>
+  <div class="nav-wrapper brown lighten-1">
+      <a class="brand-logo center hide-on-med-and-down">My Book Club</a>
+      <a data-target="mobileToggle" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a [routerLink]="['']">Home</a></li>
+        <li><a [routerLink]="['reviews']">Recent Reviews</a></li>
+      </ul>
+  </div>
+</nav>
+<ul class="sidenav orange lighten-4" id="mobileToggle">
+  <li><a [routerLink]="['']">Home</a></li>
+  <li><a [routerLink]="['reviews']">Recent Reviews</a></li>
+</ul>
+<div class="fixed-action-btn">
+  <a class=" btn-floating btn-large amber accent-4" (click)="toggleReview()">
+    <i class="medium material-icons">mode_edit</i>
+  </a>
+  <p>Review a Book</p>
+</div>
+<app-review-book *ngIf="bookModal" (close)="closeFromReview($event)"></app-review-book>
+<router-outlet></router-outlet>

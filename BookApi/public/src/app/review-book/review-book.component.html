@@ -1,0 +1,31 @@
+<form (submit)="submitReview()">
+  <div class="modalContent">
+    <a class="btn-floating right btn-small transparent" (click)="closeModal()">
+      <i class="medium material-icons">close</i>
+    </a>
+    <div class="modalHead">
+      <h4>Write a review...</h4>
+    </div>
+    <div class="modalBody">
+      <div class="input-field">
+        <input type="text" id="name" name="form.name" [(ngModel)]="form.name"/>
+        <label for="name">Your Name</label>
+      </div>
+      <div class="input-field">
+        <input type="text" id="title" name="form.title" [(ngModel)]="form.title"/>
+        <label for="title">Book Title</label>
+      </div>
+      <div class="input-field">
+        <input type="text" id="author" name="form.author" [(ngModel)]="form.author">
+        <label for="author">Author</label>
+      </div>
+      <div class="input-field">
+        <textarea id="review" class="materialize-textarea" name="form.review" [(ngModel)]="form.review"></textarea>
+        <label for="review">Book Review</label>
+      </div>
+    </div>
+    <div class="modalFoot">
+      <button type="submit" class="btn waves-effect waves-light red darken-1">Submit Review</button>
+    </div>
+  </div>
+</form>

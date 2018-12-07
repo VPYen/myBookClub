@@ -1,0 +1,24 @@
+.container {
+  color: goldenrod;
+  font-family: antiqua;
+}
+
+h5 {
+  color: lightgray;
+}
+
+#parallax0 {
+    background-image: url("/assets/images/comicLibrary.jpg");
+    opacity: .9;
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    top: 15%;
+    z-index: -5;
+    margin-bottom: 100;
+    /* parallax effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,41 @@
+a {
+  cursor: pointer;
+}
+
+#nav-mobile {
+  margin-left: 20px;
+}
+
+.sidenav {
+  width: 200px;
+  height: 300px;
+  margin-top: 10%;
+}
+
+.sidenav > li {
+  margin-top: 15px;
+}
+
+.fixed-action-btn {
+  font-size: 14px;
+  text-align: center;
+}
+
+.fixed-action-btn p {
+  cursor: default;
+}
+
+.brand-logo {
+  cursor: default;
+}
+
+@media only screen and (max-width: 1400px) {
+  .fixed-action-btn {
+    font-size: 10px;
+  }
+
+  .btn-floating {
+    width: 50px;
+    height: 50px;
+  }
+}

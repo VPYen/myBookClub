@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col order-1">
+      <h5><span class="label">Title:</span> {{book.title}}</h5>
+      <h5><span class="label">Author:</span> {{book.author}}</h5>
+      <h6><span class="label">Reviewer:</span> {{book.name}}</h6>
+      <h6><span class="label">Review:</span> {{book.review}}</h6>
+      <div class="col formBox">
+        <h5><span class="label">Leave a comment...</span></h5>
+        <form (submit)="submitComment()">
+          <div class="input-field">
+            <input type="text" id="name" name="form.name" [(ngModel)]="form.name"/>
+            <label for="name">Name</label>
+          </div>
+          <label for="comment">Comment</label>
+          <div class="input-field">
+            <textarea id="comment" name="form.comment" [(ngModel)]="form.comment"></textarea>
+          </div>
+          <button type="submit" class="btn red accent-3">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="col order-2">
+      <h4 id="comment"><span class="label">Comments</span></h4>
+      <div id="msgBox">
+        <p *ngFor="let comment of book.comments"><span class="label">{{comment.name}} - </span>{{comment.comment}} | {{comment.createdAt | date}}</p>
+      </div>
+    </div>
+  </div>
+</div>
