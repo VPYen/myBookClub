@@ -1,7 +1,7 @@
 // import { HttpService } from "./http.service"
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap, Params } from '@angular/router';
-
+ 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
